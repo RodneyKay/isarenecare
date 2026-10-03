@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<meta name="description" content="<%= description %>">
+<link rel="canonical" href="<%= canonical %>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="<%= site.name %>">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:description" content="<%= description %>">
+<meta property="og:url" content="<%= canonical %>">
+<meta property="og:image" content="<%= typeof ogImage !== 'undefined' ? ogImage : site.img.og %>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1A7F96">
+<link rel="icon" href="<%= site.img.favicon %>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/vendor/icons/bootstrap-icons.min.css">
+<link href="/vendor/aos/aos.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/isarene.css" rel="stylesheet">
+<script type="application/ld+json"><%- JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'LocalBusiness',
+  name: site.name, url: site.url, image: site.img.og, logo: site.img.logo,
+  telephone: site.phonePrimary.tel, email: site.email,
+  address: { '@type': 'PostalAddress', streetAddress: '258 Salem Rd, Suite 8', addressLocality: 'Billerica', addressRegion: 'MA', postalCode: '01862', addressCountry: 'US' },
+  openingHours: 'Mo-Su 00:00-24:00', areaServed: 'Massachusetts'
+}).replace(/</g, '\\u003c') %></script>
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+
+<div id="preloader" aria-hidden="true">
+  <div class="preload-ring"><i class="bi bi-house-heart-fill preload-heart"></i></div>
+  <div class="preload-text">ISARENE HOME CARE</div>
+</div>

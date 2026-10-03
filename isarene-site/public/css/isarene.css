@@ -1,0 +1,109 @@
+/* Isarene overrides on top of the Hopewell template */
+.skip-link{position:absolute;left:-999px;top:8px;background:#fff;color:var(--clr-primary-dark);padding:8px 14px;border-radius:8px;z-index:3000}
+.skip-link:focus{left:8px}
+:focus-visible{outline:3px solid var(--clr-secondary);outline-offset:2px}
+.hp-field{position:absolute !important;left:-9999px;width:1px;height:1px;opacity:0}
+.logo-img{height:48px;width:auto;display:block}
+.logo-img-footer{filter:brightness(0) invert(1);background:transparent}
+.nav-phone{align-items:center;gap:8px;color:var(--clr-text);font-weight:600;text-decoration:none;font-family:var(--font-display)}
+.nav-phone i{color:var(--clr-primary)}
+.dropdown-menu-hw{border:0;border-radius:14px;padding:8px;box-shadow:var(--shadow-soft)}
+.dropdown-menu-hw .dropdown-item{border-radius:8px;padding:9px 14px;font-weight:500}
+.dropdown-menu-hw .dropdown-item:hover{background:var(--clr-primary-light);color:var(--clr-primary-dark)}
+@media (min-width:992px){.nav-hw .dropdown:hover>.dropdown-menu{display:block;margin-top:0}}
+img{background:var(--clr-primary-light)}
+.footer-plain{color:inherit;text-decoration:none}.footer-plain:hover{text-decoration:underline}
+.mobile-donate-bar{display:none}
+@media (max-width:991.98px){
+  .mobile-donate-bar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:1500;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -6px 24px rgba(15,23,42,.12)}
+  .mobile-donate-bar a{flex:1;justify-content:center}
+  body{padding-bottom:76px}
+  #scrollTop{bottom:90px}
+}
+.trust-row{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:2rem;font-size:.9rem;color:var(--clr-text-muted)}
+.trust-row span{display:inline-flex;align-items:center;gap:8px}
+.trust-row i{color:var(--clr-primary)}
+.stat-static{font-family:var(--font-display);font-weight:800}
+.svc-list{list-style:none;padding:0;margin:.75rem 0 1rem}
+.svc-list li{display:flex;gap:8px;font-size:.9rem;color:var(--clr-text-muted);padding:3px 0}
+.svc-list i{color:var(--clr-primary);margin-top:3px}
+.service-feature{display:flex;gap:16px;padding:20px;background:#fff;border-radius:var(--radius-sm);box-shadow:var(--shadow-soft);height:100%}
+.service-feature .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--clr-primary-light);color:var(--clr-primary-dark);display:grid;place-items:center;font-size:1.2rem}
+.service-feature h3{font-size:1.05rem;margin:0 0 4px;font-family:var(--font-display);font-weight:700}
+.service-feature p{margin:0;font-size:.92rem;color:var(--clr-text-muted)}
+.rounded-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft)}
+.rounded-media img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover}
+.form-status-ok,.form-status-err{padding:12px 16px;border-radius:12px;font-size:.92rem}
+.form-status-ok{background:var(--clr-primary-light);color:var(--clr-primary-dark)}
+.form-status-err{background:#fee2e2;color:#b91c1c}
+.map-frame{border:0;width:100%;height:260px;border-radius:var(--radius-sm);margin-top:20px}
+.role-card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-soft);height:100%}
+.role-card .ic{width:48px;height:48px;border-radius:14px;background:var(--clr-primary-light);color:var(--clr-primary-dark);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
+.gallery-grid{columns:3 260px;column-gap:16px}
+.gallery-grid figure{break-inside:avoid;margin:0 0 16px;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-soft)}
+.gallery-grid img{width:100%;display:block}
+.testi-section .testi-quote{font-size:.97rem}
+.dementia-note{font-size:.85rem;color:var(--clr-text-muted)}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+/* Prevent horizontal scroll on small screens */
+html,body{overflow-x:clip}
+img{max-width:100%}
+.hero-media,.hero-media-frame{max-width:100%}
+@media (max-width:575.98px){.float-card-1{left:0}.float-card-2{right:0}.hero-glow{display:none}}
+
+/* ===== Full-screen hero: everything fits in one view (nav + copy + CTAs + photo) ===== */
+.hero-full{
+  min-height:100vh;min-height:100svh;height:100svh;
+  display:flex;align-items:center;
+  padding:clamp(84px,11svh,110px) 0 clamp(16px,3svh,36px);
+  overflow:hidden;
+}
+.hero-full > .container{height:100%;display:flex;align-items:center}
+.hero-full .row{width:100%}
+.hero-full .eyebrow{font-size:.72rem}
+.hero-full .hero-title{
+  font-size:clamp(2.1rem,min(4.6vw,7.4svh),4rem);
+  margin-top:clamp(.6rem,2svh,1.5rem) !important;
+}
+.hero-full .hero-lead{margin-top:clamp(.6rem,2svh,1.5rem) !important;font-size:clamp(.98rem,2.2svh,1.15rem)}
+.hero-full .d-flex.flex-wrap.gap-3.mt-4{margin-top:clamp(.8rem,2.6svh,1.75rem) !important}
+.hero-full .trust-row{margin-top:clamp(.8rem,2.6svh,1.75rem)}
+.hero-full .hero-media-frame{aspect-ratio:auto;height:clamp(360px,calc(100svh - 190px),760px);width:100%}
+.hero-full .hero-media{max-width:100%}
+.hero-full .float-card-1{left:-6%}
+.hero-full .float-card-2{right:-4%}
+
+@media (max-width:991.98px){
+  /* Phones/tablets: copy on top, photo fills whatever height is left, sticky bar stays visible */
+  .hero-full{height:100svh;min-height:520px;align-items:stretch;padding:78px 0 84px}
+  .hero-full > .container{align-items:stretch}
+  .hero-full .row{flex-direction:column;flex-wrap:nowrap;height:100%;--bs-gutter-y:.75rem}
+  .hero-full .row > [class*="col-"]{width:100%}
+  .hero-full .row > [class*="col-"]:last-child{flex:1 1 0;min-height:90px}
+  .hero-full .hero-media,.hero-full .hero-media-frame{height:100%}
+  .hero-full .hero-media-frame{aspect-ratio:auto;border-radius:22px}
+  .hero-full .hero-title{font-size:clamp(1.8rem,min(8.2vw,5.4svh),2.6rem);margin-top:.7rem !important}
+  .hero-full .hero-lead{font-size:.95rem;margin-top:.6rem !important;line-height:1.5}
+  .hero-full .float-card{display:none}
+  .hero-full .trust-row,.hero-full .hero-facility{display:none}
+  .hero-full .btn-hw-primary,.hero-full .btn-hw-outline{padding:.65rem 1.1rem;font-size:.92rem}
+}
+@media (max-width:991.98px) and (min-height:760px){
+  .hero-full .trust-row{display:flex;margin-top:.8rem;font-size:.8rem;gap:4px 14px}
+}
+@media (min-width:992px) and (max-height:640px){
+  .hero-full .trust-row{display:none}
+}
+
+/* ===== About collage: fixed shapes + object-fit so photos never stretch ===== */
+.about-collage{margin-bottom:9%}
+.about-collage .img-a{aspect-ratio:4/3.3}
+.about-collage .img-b{aspect-ratio:1/1.12}
+.about-collage .img-a img,.about-collage .img-b img{width:100%;height:100%;display:block;object-fit:cover}
+.about-collage .img-a img{object-position:center 22%}  /* keep faces in frame */
+.about-collage .img-b img{object-position:center 30%}
+/* every content photo keeps its natural proportions */
+.rounded-media img,.gallery-grid img{height:auto}
+@media (max-width:991.98px){.about-collage{margin-bottom:12%}.about-collage .img-b{right:-3%}}
+.about-collage .img-b{right:-2%;bottom:-9%}

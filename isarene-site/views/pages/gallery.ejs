@@ -1,0 +1,11 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: 'bi-images', eyebrow: 'Gallery', heading: 'Moments from our caregivers and clients', lead: 'A look at the people and the care behind Isarene.' }) %>
+<section class="section-pad pt-4"><div class="container">
+  <div class="gallery-grid">
+    <% ['hero','about1','about2','homecare','staffing','transport','cta'].forEach(function (k) { %>
+    <figure><img src="<%= site.img[k] %>" alt="Isarene Home Care Services" loading="lazy"></figure>
+    <% }) %>
+  </div>
+</div></section>
+<%- include('../partials/footer') %>

@@ -1,0 +1,30 @@
+<%- include('../partials/head', { ogImage: post.image }) %>
+<%- include('../partials/nav') %>
+<header class="post-hero">
+  <span class="blob blob-a"></span>
+  <div class="container">
+    <span class="eyebrow mt-3"><i class="bi bi-journal-text"></i> <%= post.category %></span>
+    <h1 class="post-title"><%= post.title %></h1>
+    <div class="post-meta">
+      <span class="stat"><i class="bi bi-calendar3"></i> <%= post.dateLabel %></span>
+      <span class="stat"><i class="bi bi-clock"></i> <%= post.read %> min read</span>
+      <span class="stat"><i class="bi bi-building"></i> Isarene Home Care Services</span>
+    </div>
+  </div>
+</header>
+<section class="container"><div class="post-cover"><img src="<%= post.image %>" alt="" width="1200"></div></section>
+<section class="section-pad bg-white">
+  <div class="container">
+    <article class="post-body">
+      <% post.body.forEach(function (b) { if (b[0] === 'p') { %><p><%= b[1] %></p><% } else if (b[0] === 'h3') { %><h2 class="h3"><%= b[1] %></h2><% } else if (b[0] === 'quote') { %><blockquote class="post-pullquote"><%= b[1] %></blockquote><% } }) %>
+      <div class="policy-callout mt-4"><i class="bi bi-telephone-fill"></i> Need help finding the right care? Call <a href="tel:<%= site.phonePrimary.tel %>"><%= site.phonePrimary.display %></a> or <a href="/contact#request">request an assessment</a>.</div>
+    </article>
+  </div>
+</section>
+<section class="section-pad pt-0 bg-white">
+  <div class="container">
+    <h2 class="section-title mb-4" style="font-size:1.8rem;">Keep reading</h2>
+    <div class="row g-4"><% related.forEach(function (p) { %><div class="col-md-6"><%- include('../partials/postcard', { p: p }) %></div><% }) %></div>
+  </div>
+</section>
+<%- include('../partials/footer') %>

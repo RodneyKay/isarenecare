@@ -1,0 +1,30 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: 'bi-person-heart', eyebrow: 'Careers', heading: 'Join a team that treats people like family', lead: 'We are always looking for caring, dependable people to support clients in Billerica and surrounding communities.' }) %>
+<section class="section-pad pt-4"><div class="container">
+  <div class="row g-4">
+    <% [['bi-heart-pulse-fill','CNA / HHA','Provide personal care and companionship for clients at home or in facilities.'],
+        ['bi-person-hearts','Private duty caregiver','Support one client with daily living, meals and medication reminders.'],
+        ['bi-truck-front-fill','Driver','Take clients safely to appointments, errands and outings in accessible vans.']].forEach(function (r, i) { %>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="<%= i * 80 %>"><div class="role-card"><div class="ic"><i class="bi <%= r[0] %>"></i></div><h2 class="font-display fw-bold h5"><%= r[1] %></h2><p class="text-muted mb-0"><%= r[2] %></p></div></div>
+    <% }) %>
+  </div>
+  <div class="row justify-content-center mt-5" id="apply"><div class="col-lg-8">
+    <div class="contact-card" data-aos="fade-up">
+      <h2 class="font-display fw-bold h4 mb-3">Apply now</h2>
+      <form data-ajax-form action="/api/apply" method="post" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label small fw-semibold" for="ap-name">Full name</label><input class="form-control form-control-hw" id="ap-name" name="name" autocomplete="name" required></div>
+          <div class="col-md-6"><label class="form-label small fw-semibold" for="ap-phone">Phone</label><input type="tel" class="form-control form-control-hw" id="ap-phone" name="phone" autocomplete="tel" required></div>
+          <div class="col-md-6"><label class="form-label small fw-semibold" for="ap-email">Email</label><input type="email" class="form-control form-control-hw" id="ap-email" name="email" autocomplete="email"></div>
+          <div class="col-md-6"><label class="form-label small fw-semibold" for="ap-role">Role</label><select class="form-select form-control-hw" id="ap-role" name="role" required><option value="">Choose a role</option><option>CNA / HHA</option><option>Private duty caregiver</option><option>Driver</option><option>Other</option></select></div>
+          <div class="col-12"><label class="form-label small fw-semibold" for="ap-msg">Tell us about your experience</label><textarea class="form-control form-control-hw" id="ap-msg" name="message" rows="4"></textarea></div>
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="col-12"><button class="btn-hw-primary w-100 justify-content-center" type="submit">Submit application <i class="bi bi-send"></i></button></div>
+          <div class="col-12" role="status" aria-live="polite" data-form-status></div>
+        </div>
+      </form>
+    </div>
+  </div></div>
+</div></section>
+<%- include('../partials/footer') %>

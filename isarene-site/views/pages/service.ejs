@@ -1,0 +1,36 @@
+<%- include('../partials/head', { ogImage: site.img[service.imgKey] }) %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: service.icon, eyebrow: 'Isarene Services', heading: service.title, lead: service.lead }) %>
+<section class="section-pad pt-4">
+  <div class="container">
+    <div class="row g-5 align-items-center mb-5">
+      <div class="col-lg-6" data-aos="fade-right"><div class="rounded-media"><img src="<%= site.img[service.imgKey] %>" alt="<%= service.title %>" width="1024"></div></div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem);">Who this is for</h2>
+        <ul class="about-list mt-3">
+          <% service.who.forEach(function (w) { %><li><span class="ic"><i class="bi bi-check2"></i></span><div><strong><%= w %></strong></div></li><% }) %>
+        </ul>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="/contact#request" class="btn-hw-primary">Request Care <i class="bi bi-arrow-right"></i></a>
+          <a href="tel:<%= site.phonePrimary.tel %>" class="btn-hw-outline"><i class="bi bi-telephone-fill"></i> <%= site.phonePrimary.display %></a>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-title text-center mb-4" style="font-size:clamp(1.6rem,3vw,2.2rem);" data-aos="fade-up">What's included</h2>
+    <div class="row g-4">
+      <% service.items.forEach(function (it, i) { %>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="<%= (i % 2) * 80 %>"><div class="service-feature"><span class="ic"><i class="bi bi-check2-circle"></i></span><div><h3><%= it[0] %></h3><p><%= it[1] %></p></div></div></div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<section class="section-pad pt-0">
+  <div class="container">
+    <div class="cta-banner" data-aos="zoom-in">
+      <h2>Ready to talk about <%= service.short.toLowerCase() %>?</h2>
+      <p class="mb-4" style="opacity:.92;">Call any time or send a request and we will contact you.</p>
+      <a class="btn-cta text-decoration-none" href="/contact#request">Request Care</a>
+    </div>
+  </div>
+</section>
+<%- include('../partials/footer') %>

@@ -1,0 +1,208 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+
+<header class="hero hero-full" id="home">
+  <div class="hero-glow"></div>
+  <span class="blob blob-1"></span><span class="blob blob-2"></span><span class="blob blob-3"></span>
+  <div class="container position-relative">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="eyebrow"><i class="bi bi-geo-alt-fill"></i> Billerica, MA &amp; surrounding communities</span>
+        <h1 class="hero-title mt-4">Care that moves with you, right at <span class="accent-underline">home<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 10 Q 50 2 100 8 T 198 6" stroke="#2575FC" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span>.</h1>
+        <p class="hero-lead mt-4">Reliable, dignified non-medical home care, medical transportation and healthcare staffing. We treat every client like our own family.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="/contact#request" class="btn-hw-primary">Request Care <i class="bi bi-arrow-right"></i></a>
+          <a href="tel:<%= site.phonePrimary.tel %>" class="btn-hw-outline"><i class="bi bi-telephone-fill"></i> <%= site.phonePrimary.display %></a>
+        </div>
+        <p class="mt-3 mb-0 small text-muted hero-facility">Running a facility? <a href="/services/staffing-solutions">Find healthcare staffing</a></p>
+        <div class="trust-row">
+          <span><i class="bi bi-patch-check-fill"></i> Registered in Massachusetts</span>
+          <span><i class="bi bi-clock-fill"></i> 24/7 on-call support</span>
+          <span><i class="bi bi-shield-check"></i> Screened, trained caregivers</span>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="120">
+        <div class="hero-media">
+          <div class="hero-media-frame">
+            <img src="<%= site.img.hero %>" alt="An Isarene caregiver supporting a client at home" width="900">
+          </div>
+          <div class="float-card float-card-1">
+            <span class="fc-icon"><i class="bi bi-house-heart-fill"></i></span>
+            <div><div class="fc-val">Home care</div><div class="fc-label">Personal, dignified support</div></div>
+          </div>
+          <div class="float-card float-card-2">
+            <span class="fc-icon"><i class="bi bi-telephone-inbound-fill"></i></span>
+            <div><div class="fc-val">24/7</div><div class="fc-label">On-call support</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section-pad pt-0" id="impact">
+  <div class="container">
+    <div class="stats-band" data-aos="zoom-in">
+      <div class="row g-0">
+        <div class="col-6 col-md-3 stat-item"><div class="stat-num stat-static">24/7</div><div class="stat-label">Availability</div></div>
+        <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span class="counter" data-target="3">3</span></div><div class="stat-label">Services under one roof</div></div>
+        <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span class="counter" data-target="7">7</span></div><div class="stat-label">In-home care services</div></div>
+        <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span class="counter" data-target="4">4</span></div><div class="stat-label">Staffing solutions</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="about">
+  <div class="container contact-card about-card">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="about-collage">
+          <div class="about-badge">
+            <div class="ab-ring"><span>MA</span></div>
+            <div><div class="fw-bold font-display" style="font-size:.9rem;">State registered</div><div class="text-muted" style="font-size:.78rem;">Non-medical home care agency</div></div>
+          </div>
+          <div class="img-a"><img src="<%= site.img.about1 %>" alt="Isarene caregivers with a family" loading="lazy" width="800"></div>
+          <div class="img-b"><img src="<%= site.img.about2 %>" alt="Caregiver visiting a senior at home" loading="lazy" width="500"></div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <span class="eyebrow"><i class="bi bi-heart-fill"></i> About Isarene</span>
+        <h2 class="section-title mt-3 mb-3" style="font-size:clamp(1.7rem,3vw,2.4rem);">We provide peace of mind for your family</h2>
+        <p class="section-sub">Founded on family principles and driven by compassion, Isarene is a registered non-medical home care agency with the Commonwealth of Massachusetts. We understand what it means to worry about a loved one, so we built a company that treats every client like our own family.</p>
+        <ul class="about-list mt-3">
+          <li><span class="ic"><i class="bi bi-people-fill"></i></span><div><strong>Founded on family</strong><div class="text-muted small">Every client is cared for like family.</div></div></li>
+          <li><span class="ic"><i class="bi bi-patch-check-fill"></i></span><div><strong>Registered in Massachusetts</strong><div class="text-muted small">A registered non-medical home care agency.</div></div></li>
+          <li><span class="ic"><i class="bi bi-geo-alt-fill"></i></span><div><strong>Local, because we live here</strong><div class="text-muted small">We know the local roads, hospitals and communities.</div></div></li>
+        </ul>
+        <a href="/about" class="btn-hw-outline mt-3">Our story <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad bg-white" id="services">
+  <div class="container">
+    <div class="text-center mx-auto mb-5" style="max-width:660px;" data-aos="fade-up">
+      <span class="eyebrow"><i class="bi bi-grid-fill"></i> Our Services</span>
+      <h2 class="section-title mt-3" style="font-size:clamp(1.8rem,3.2vw,2.5rem);">Compassionate care that puts your loved ones first</h2>
+      <p class="section-sub mx-auto mt-2">Personalized, reliable and professional support, delivered with dignity and respect.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <% Object.values(site.services).forEach(function (s, i) { %>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<%= i * 100 %>">
+        <div class="cause-card">
+          <div class="cause-img">
+            <img src="<%= site.img[s.imgKey] %>" alt="<%= s.title %>" loading="lazy" width="600">
+            <span class="cause-tag"><%= s.short %></span>
+          </div>
+          <div class="cause-body">
+            <h3 class="font-display fw-bold h5"><%= s.title %></h3>
+            <ul class="svc-list">
+              <% s.items.slice(0, 4).forEach(function (it) { %><li><i class="bi bi-check-circle-fill"></i><%= it[0] %></li><% }) %>
+            </ul>
+            <a class="cause-donate d-block text-center text-decoration-none" href="/services/<%= s.slug %>">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="why" style="background:var(--clr-bg);">
+  <div class="container">
+    <div class="text-center mx-auto mb-5" style="max-width:660px;" data-aos="fade-up">
+      <span class="eyebrow"><i class="bi bi-award-fill"></i> Why Choose Isarene</span>
+      <h2 class="section-title mt-3" style="font-size:clamp(1.8rem,3.2vw,2.5rem);">One trusted team for the care your family needs</h2>
+      <p class="section-sub mx-auto mt-2">Finding care shouldn't mean juggling multiple agencies. Home care, transportation and healthcare staffing come together under one roof.</p>
+    </div>
+    <div class="row g-4">
+      <% [
+        ['bi-clock-history','24/7 availability & on-call support','Reliable support when you need it most, with on-call care for urgent needs.'],
+        ['bi-heart-fill','Compassionate caregivers','Screened staff trained in safety, dementia care and mobility assistance.'],
+        ['bi-patch-check-fill','Certified professionals','Thoroughly vetted CNAs, HHAs and drivers dedicated to your family’s well-being.'],
+        ['bi-sliders','Flexible care plans','Customizable schedules from a few hours a week to 24-hour live-in support.'],
+        ['bi-house-door-fill','One roof, three services','Home care, medical transportation and staffing from a single team.'],
+        ['bi-geo-alt-fill','Local to Massachusetts','We know the roads, hospitals and communities because we live and work here too.']
+      ].forEach(function (w, i) { %>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<%= (i % 3) * 80 %>">
+        <div class="why-card"><div class="why-ic"><i class="bi <%= w[0] %>"></i></div><h3 class="font-display fw-bold h5"><%= w[1] %></h3><p class="text-muted mb-0"><%= w[2] %></p></div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad bg-white" id="how">
+  <div class="container contact-card">
+    <div class="text-center mx-auto mb-5" style="max-width:660px;" data-aos="fade-up">
+      <span class="eyebrow"><i class="bi bi-signpost-split-fill"></i> How It Works</span>
+      <h2 class="section-title mt-3" style="font-size:clamp(1.8rem,3.2vw,2.5rem);">Simple, reliable home care in three steps</h2>
+    </div>
+    <div class="hiw-wrap">
+      <div class="hiw-line"></div>
+      <div class="row g-4">
+        <div class="col-md-4 hiw-step" data-aos="fade-up"><div class="hiw-num">1</div><h3 class="font-display fw-bold h5">Tell us what you need</h3><p class="text-muted">Call or send a request. We take the time to understand your needs.</p></div>
+        <div class="col-md-4 hiw-step" data-aos="fade-up" data-aos-delay="120"><div class="hiw-num">2</div><h3 class="font-display fw-bold h5">Get a personalized care plan</h3><p class="text-muted">We develop a plan around your loved one's routine, preferences and schedule.</p></div>
+        <div class="col-md-4 hiw-step" data-aos="fade-up" data-aos-delay="240"><div class="hiw-num">3</div><h3 class="font-display fw-bold h5">Meet your caregiver</h3><p class="text-muted">We match you with a compassionate caregiver who provides dependable support.</p></div>
+      </div>
+    </div>
+    <div class="text-center mt-5"><a href="/contact#request" class="btn-hw-primary">Request Care <i class="bi bi-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<section class="section-pad bg-white pt-0" id="testimonials">
+  <div class="container">
+    <div class="testi-section p-4 p-md-5" data-aos="zoom-in">
+      <div class="text-center mx-auto mb-5" style="max-width:640px;">
+        <span class="eyebrow" style="background:rgba(255,255,255,.15);color:#fff;"><i class="bi bi-chat-quote-fill"></i> Testimonials</span>
+        <h2 class="section-title mt-3 text-white" style="font-size:clamp(1.7rem,3vw,2.3rem);">Trusted by families across Massachusetts</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <% site.testimonials.forEach(function (t) { %>
+        <div class="col-md-6 col-lg-4">
+          <figure class="testi-card m-0">
+            <div class="testi-stars" aria-hidden="true"><% for (var i = 0; i < 5; i++) { %><i class="bi bi-star-fill"></i><% } %></div>
+            <blockquote class="testi-quote m-0">&ldquo;<%= t.quote %>&rdquo;</blockquote>
+            <figcaption class="testi-person mt-3"><div><div class="testi-name"><%= t.name %></div><div class="testi-role"><%= t.place %></div></div></figcaption>
+          </figure>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad pt-0" id="guides">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4" data-aos="fade-up">
+      <div>
+        <span class="eyebrow"><i class="bi bi-journal-richtext"></i> Latest News &amp; Updates</span>
+        <h2 class="section-title mt-3 mb-0" style="font-size:clamp(1.7rem,3vw,2.3rem);">Guides for families</h2>
+      </div>
+      <a href="/blogs" class="btn-hw-outline">All articles <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="row g-4">
+      <% posts.forEach(function (p, i) { %>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<%= i * 80 %>"><%- include('../partials/postcard', { p: p }) %></div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad pt-0" id="cta">
+  <div class="container">
+    <div class="cta-banner" data-aos="zoom-in">
+      <i class="bi bi-house-heart-fill" style="font-size:2.4rem;"></i>
+      <h2 class="mt-3">Your family deserves care you can count on.</h2>
+      <p class="mb-4" style="opacity:.92;">Call us any time, or request an assessment and we will get back to you.</p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a class="btn-cta text-decoration-none" href="/contact#request"><i class="bi bi-calendar-check-fill me-2"></i>Request Care</a>
+        <a class="btn-cta text-decoration-none" href="tel:<%= site.phonePrimary.tel %>"><i class="bi bi-telephone-fill me-2"></i><%= site.phonePrimary.display %></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

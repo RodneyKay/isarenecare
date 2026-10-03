@@ -1,0 +1,23 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: 'bi-grid-fill', eyebrow: 'Our Services', heading: 'Home care, staffing and transportation under one roof', lead: 'Personalized, reliable and professional support for seniors and individuals who need daily assistance.' }) %>
+<section class="section-pad pt-4">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <% Object.values(site.services).forEach(function (s, i) { %>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<%= i * 90 %>">
+        <div class="cause-card">
+          <div class="cause-img"><img src="<%= site.img[s.imgKey] %>" alt="<%= s.title %>" loading="lazy" width="600"><span class="cause-tag"><%= s.short %></span></div>
+          <div class="cause-body">
+            <h2 class="font-display fw-bold h5"><%= s.title %></h2>
+            <p class="text-muted small"><%= s.lead %></p>
+            <ul class="svc-list"><% s.items.forEach(function (it) { %><li><i class="bi bi-check-circle-fill"></i><%= it[0] %></li><% }) %></ul>
+            <a class="cause-donate d-block text-center text-decoration-none" href="/services/<%= s.slug %>">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<%- include('../partials/footer') %>

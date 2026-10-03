@@ -1,0 +1,9 @@
+<header class="policy-hero">
+  <div class="hero-glow"></div>
+  <div class="container position-relative text-center" data-aos="fade-up">
+    <span class="eyebrow"><i class="bi <%= icon %>"></i> <%= eyebrow %></span>
+    <h1 class="hero-title mt-3 mx-auto" style="font-size:clamp(2rem,4vw,2.9rem);max-width:760px;"><%= heading %></h1>
+    <p class="hero-lead mt-3 mx-auto text-center"><%= lead %></p>
+    <% if (typeof extra !== 'undefined') { %><%- extra %><% } %>
+  </div>
+</header>

@@ -1,0 +1,28 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: 'bi-question-circle-fill', eyebrow: 'Help Center', heading: 'Frequently asked questions', lead: 'Answers about our home care, staffing and transportation services.',
+  extra: '<div class="faq-search mt-4"><i class="bi bi-search"></i><input type="text" id="faqSearch" placeholder="Search questions" aria-label="Search FAQs"><button class="clear-btn" id="faqClear" type="button" aria-label="Clear search"><i class="bi bi-x-lg"></i></button></div>' }) %>
+<section class="pb-0" style="padding-top:20px;"><div class="container"><div class="faq-cats">
+  <button class="faq-cat-btn active" data-cat="all" type="button"><i class="bi bi-grid-fill"></i>All</button>
+  <% groups.forEach(function (g) { %><button class="faq-cat-btn" data-cat="<%= g.cat %>" type="button"><i class="bi <%= g.icon %>"></i><%= g.title %></button><% }) %>
+</div></div></section>
+<section class="section-pad"><div class="container">
+  <% var n = 0; groups.forEach(function (g) { %>
+  <div class="faq-group" data-group="<%= g.cat %>">
+    <div class="faq-group-title"><span class="gi"><i class="bi <%= g.icon %>"></i></span><%= g.title %></div>
+    <div class="accordion faq-accordion" id="acc-<%= g.cat %>">
+      <% g.items.forEach(function (it) { n++; %>
+      <div class="faq-item" data-cat="<%= g.cat %>">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q<%= n %>" aria-expanded="false" aria-controls="q<%= n %>"><%= it[0] %></button></h2>
+          <div id="q<%= n %>" class="accordion-collapse collapse" data-bs-parent="#acc-<%= g.cat %>"><div class="accordion-body"><%= it[1] %></div></div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+  <% }) %>
+  <div class="faq-empty" id="faqEmpty"><i class="bi bi-search"></i><p>No questions match your search. <a href="/contact">Ask us directly</a>.</p></div>
+  <div class="text-center mt-5"><p class="text-muted">Still have questions?</p><a class="btn-hw-primary" href="/contact">Contact us <i class="bi bi-arrow-right"></i></a></div>
+</div></section>
+<%- include('../partials/footer') %>

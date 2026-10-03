@@ -1,0 +1,17 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: doc.icon, eyebrow: 'Legal', heading: doc.title, lead: doc.lead, extra: '<div class="policy-updated mt-3"><i class="bi bi-clock-history me-1"></i> Last updated: ' + doc.updated + '</div>' }) %>
+<section class="section-pad pt-4"><div class="container"><div class="policy-layout">
+  <aside class="policy-toc d-none d-lg-block"><h6>On this page</h6>
+    <ul id="policyToc"><% doc.sections.forEach(function (s, i) { %><li><a href="#s<%= i + 1 %>"><%= s[0] %></a></li><% }) %></ul>
+  </aside>
+  <div class="policy-content">
+    <% doc.sections.forEach(function (s, i) { %>
+    <h2 id="s<%= i + 1 %>"><span class="num"><%= i + 1 %></span><%= s[0] %></h2>
+    <% if (s[1].length > 1 && s[0] !== 'Overview') { %><ul><% s[1].forEach(function (l) { %><li><%= l %></li><% }) %></ul><% } else { s[1].forEach(function (l) { %><p><%= l %></p><% }) } %>
+    <% if (s[2]) { %><div class="policy-callout"><i class="bi bi-info-circle-fill"></i> <%= s[2] %></div><% } %>
+    <% }) %>
+    <div class="policy-callout"><i class="bi bi-envelope-fill"></i> <%= site.name %>, <%= site.address %> &middot; <a href="mailto:<%= site.email %>"><%= site.email %></a> &middot; <a href="tel:<%= site.phonePrimary.tel %>"><%= site.phonePrimary.display %></a></div>
+  </div>
+</div></div></section>
+<%- include('../partials/footer') %>

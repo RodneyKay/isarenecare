@@ -1,0 +1,42 @@
+<form data-ajax-form action="/api/request-care" method="post" novalidate>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label small fw-semibold" for="rc-name">Your name</label>
+      <input type="text" class="form-control form-control-hw" id="rc-name" name="name" autocomplete="name" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label small fw-semibold" for="rc-phone">Phone</label>
+      <input type="tel" class="form-control form-control-hw" id="rc-phone" name="phone" autocomplete="tel" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label small fw-semibold" for="rc-email">Email <span class="text-muted fw-normal">(optional)</span></label>
+      <input type="email" class="form-control form-control-hw" id="rc-email" name="email" autocomplete="email">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label small fw-semibold" for="rc-service">What do you need?</label>
+      <select class="form-select form-control-hw" id="rc-service" name="service">
+        <option>Home care for a loved one</option>
+        <option>Healthcare staffing for a facility</option>
+        <option>Transportation</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label small fw-semibold" for="rc-town">Town</label>
+      <input type="text" class="form-control form-control-hw" id="rc-town" name="town" placeholder="e.g. Billerica">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label small fw-semibold" for="rc-time">Best time to call</label>
+      <input type="text" class="form-control form-control-hw" id="rc-time" name="bestTime" placeholder="e.g. Weekdays after 5pm">
+    </div>
+    <div class="col-12">
+      <label class="form-label small fw-semibold" for="rc-message">Anything we should know? <span class="text-muted fw-normal">(optional)</span></label>
+      <textarea class="form-control form-control-hw" id="rc-message" name="message" rows="3" placeholder="Please do not include detailed medical information."></textarea>
+    </div>
+    <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="col-12">
+      <button type="submit" class="btn-hw-primary w-100 justify-content-center">Request a care assessment <i class="bi bi-send"></i></button>
+    </div>
+    <div class="col-12" role="status" aria-live="polite" data-form-status></div>
+  </div>
+</form>

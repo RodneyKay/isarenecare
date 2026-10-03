@@ -1,0 +1,14 @@
+<a href="/blogs/<%= p.slug %>" class="text-decoration-none d-block h-100">
+  <article class="blog-card h-100">
+    <div class="bc-img">
+      <img src="<%= p.image %>" alt="" loading="lazy" width="600">
+      <span class="bc-tag"><%= p.category %></span>
+    </div>
+    <div class="bc-body">
+      <div class="bc-meta"><span><i class="bi bi-calendar3"></i> <%= p.dateLabel %></span><span><i class="bi bi-clock"></i> <%= p.read %> min</span></div>
+      <h5><%= p.title %></h5>
+      <p><%= p.excerpt %></p>
+      <span class="bc-link">Read more <i class="bi bi-arrow-right"></i></span>
+    </div>
+  </article>
+</a>

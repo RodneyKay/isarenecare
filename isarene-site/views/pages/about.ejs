@@ -1,0 +1,30 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+<%- include('../partials/pagehero', { icon: 'bi-heart-fill', eyebrow: 'About Isarene', heading: 'Founded on family principles, driven by compassion', lead: 'A registered non-medical home care agency bringing reliable, dignified care to the families in our community.' }) %>
+
+<section class="section-pad pt-4">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right"><div class="rounded-media"><img src="<%= site.img.about1 %>" alt="Isarene caregivers" loading="lazy" width="1024"></div></div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="section-title" style="font-size:clamp(1.7rem,3vw,2.3rem);">We provide peace of mind for your family</h2>
+        <p class="section-sub">Isarene Home Care Services is a registered non-medical home care agency with the Commonwealth of Massachusetts. We understand what it means to worry about a loved one. That is why we built a company that treats every client like our own family.</p>
+        <p class="section-sub">Finding care shouldn't mean juggling multiple agencies. Isarene brings home care, transportation and healthcare staffing under one trusted roof. We know the local roads, hospitals and communities in Massachusetts because we live and work here too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad bg-white">
+  <div class="container">
+    <div class="row g-4">
+      <% [['bi-bullseye','Our mission','To bring reliable, dignified care to the families in our community.'],
+          ['bi-eye-fill','Our vision','To be the most trusted and respected home care agency in Massachusetts, where every individual is cared for like family and every family has peace of mind.'],
+          ['bi-people-fill','Our values','Founded on family principles, we treat every client like our own family.']].forEach(function (v, i) { %>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="<%= i * 90 %>"><div class="why-card h-100"><div class="why-ic"><i class="bi <%= v[0] %>"></i></div><h2 class="font-display fw-bold h5"><%= v[1] %></h2><p class="text-muted mb-0"><%= v[2] %></p></div></div>
+      <% }) %>
+    </div>
+    <div class="text-center mt-5"><a href="/contact#request" class="btn-hw-primary">Request Care <i class="bi bi-arrow-right"></i></a></div>
+  </div>
+</section>
+<%- include('../partials/footer') %>

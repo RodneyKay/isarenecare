@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-hw" id="mainNav" aria-label="Main">
+  <div class="container">
+    <a class="hw-logo" href="/" aria-label="<%= site.name %> home">
+      <img src="<%= site.img.logo %>" alt="<%= site.name %>" class="logo-img" width="150" height="48">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav nav-hw mx-auto mt-3 mt-lg-0">
+        <% site.nav.forEach(function (n) {
+             var active = n.href === '/' ? path === '/' : path.indexOf(n.href) === 0; %>
+          <% if (n.children) { %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle<%= active ? ' active' : '' %>" href="<%= n.href %>" role="button" data-bs-toggle="dropdown" aria-expanded="false"><%= n.label %></a>
+            <ul class="dropdown-menu dropdown-menu-hw">
+              <li><a class="dropdown-item" href="<%= n.href %>">All services</a></li>
+              <% n.children.forEach(function (c) { %><li><a class="dropdown-item" href="<%= c.href %>"><%= c.label %></a></li><% }) %>
+            </ul>
+          </li>
+          <% } else { %>
+          <li class="nav-item"><a class="nav-link<%= active ? ' active' : '' %>" href="<%= n.href %>"<%- active ? ' aria-current="page"' : '' %>><%= n.label %></a></li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <a class="nav-phone d-none d-xl-inline-flex" href="tel:<%= site.phonePrimary.tel %>"><i class="bi bi-telephone-fill"></i><%= site.phonePrimary.display %></a>
+        <a href="/contact#request" class="btn-hw-primary d-none d-lg-inline-flex">Request Care <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main id="content">
